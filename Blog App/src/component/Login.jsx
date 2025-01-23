@@ -19,7 +19,7 @@ const Login = () => {
   const navigate=useNavigate(); // to redirect to blog page when login is sucessfull
 
   const capValue = async () => {
-    axios.post('http://localhost:3000/userserver/login', form).then((res)=>{
+    axios.post('/api/userserver/login', form).then((res)=>{
       
       if(res.data.token){
         sessionStorage.setItem('logintoken',res.data.token)
