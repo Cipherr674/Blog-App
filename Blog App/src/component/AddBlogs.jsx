@@ -18,13 +18,13 @@ const location = useLocation(); // used for the update function , learn more
 
   const capValue = async () => {
       if (location.state!=null) {
-        axiosInstance.put('http://localhost:3000/server/edit/'+location.state.val._id,form1).then((res)=>{
+        axiosInstance.put('/api/server/edit/'+location.state.val._id,form1).then((res)=>{
           navigate('/blogs');
         
         })
        
       } else {
-        axiosInstance.post('http://localhost:3000/server/add', form1).then((res)=>{
+        axiosInstance.post('/api/server/add', form1).then((res)=>{
           navigate('/blogs')
           
           
