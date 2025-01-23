@@ -10,7 +10,7 @@ const Home = () => {
   const navigate=useNavigate();
 
   useEffect(() => {
-    axiosInstance.get('http://localhost:3000/server/') 
+    axiosInstance.get('/api/server/') 
       .then((res) => {
         setCardData(res.data); 
       })
@@ -27,7 +27,7 @@ const Home = () => {
     
     console.log("Deleting blog with ID:", id);
     
-    axiosInstance.delete(`http://localhost:3000/server/delete/${id}`)
+    axiosInstance.delete(`/api/server/delete/${id}`)
       .then((res) => {
         console.log(res.data);
         setCardData(cardData.filter(user => user._id !== id));
