@@ -1,0 +1,24 @@
+learn the difference between create react and create vite
+Usetate vs UseEffect
+Asset Folder-> We store static files in Assets folder just like we did in public(mongoDb)
+
+
+TO route in react => first install react dom, then <browserRouter> in main.jsx inside strictmode, then in app.jsx create <Routes><route path= '' element='your component'></Routes>
+
+
+to connect frontend to backende we use a thirparty module called cors
+
+addblogs, dbconnection, 
+
+
+
+DAY 13/1/25
+
+first we put a fucntion to the update button on home.jsx, then creatted a function named update_data and a use navigate to navigate to addblogs and passed the values of the card (prefilled), 
+then in the addblogs.jsx we added useeffect to prefill the data, 
+
+
+THEN we moved on to authentication by importing jwt token in app.js(to authtenticat useres according to their acess)
+
+// require jwt -> payload created(userserver.js) -> generted token -> initialised here token as token and called to the frontend -> then we stored the token by using sessionStorage 
+// axiosinterceptor created (we need to inject certain token by intercepting the default axios.put,post)-> 
